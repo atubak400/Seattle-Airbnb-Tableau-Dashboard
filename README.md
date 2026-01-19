@@ -73,19 +73,19 @@ Key visual components include:
 
 - **Average Price per Bedroom (Bar Chart)**  
   Highlights how pricing increases with property size.
-![Tableau Overview](tableau/screenshots/3.png)
+![Tableau Overview](tableau/screenshots/6.png)
 - **Revenue for Year (Line Chart)**  
   Shows weekly revenue trends across 2016 and highlights seasonal patterns.
-![Tableau Overview](tableau/screenshots/4.png)
+![Tableau Overview](tableau/screenshots/5.png)
 - **Distinct Count of Bedroom Listings (Table)**  
   Provides supply-side context by showing how listings are distributed by bedroom count.
-![Tableau Overview](tableau/screenshots/5.png)
+![Tableau Overview](tableau/screenshots/7.png)
 - **Price per Zip Code (Bar Chart)**  
   Enables comparison of average prices across different Seattle zip codes.
-![Tableau Overview](tableau/screenshots/6.png)
+![Tableau Overview](tableau/screenshots/3.png)
 - **Price per Zip Code (Map)**  
   Adds geographic context to pricing differences across the city.
-![Tableau Overview](tableau/screenshots/7.png)
+![Tableau Overview](tableau/screenshots/4.png)
 Detailed visual-level design decisions, field selections, and insights are documented in:  
 `docs/data_visualisation.md`
 
