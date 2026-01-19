@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+
+# Data (optional: keep raw, ignore large processed)
+data/processed/*.csv
+data/processed/*.xlsx
+
+# Tableau extracts, temp, packaged workbooks
+*.hyper
+*.tde
+*.twb~
+*.twbx~
+
+# Exports (optional)
+tableau/exports/*.pdf
+tableau/exports/*.png
