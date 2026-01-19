@@ -58,8 +58,8 @@ The data model consists of two core tables:
 
 - **Listings**: Static listing attributes such as price, bedrooms, and zip code.
 - **Calendar**: Date-level pricing data used for revenue analysis.
-
 The tables were joined using the listing identifier to support both geographic and time-based analysis.
+
 ![Tableau Overview](tableau/screenshots/1.png)
 ![Tableau Overview](tableau/screenshots/2.png)
 ---
