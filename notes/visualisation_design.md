@@ -67,3 +67,57 @@ This visual helps bridge the gap between static pricing analysis and dynamic per
 The chart shows that Airbnb revenue exhibits clear seasonality throughout the year. Revenue increases steadily from early January into late spring, peaks during the summer months, and then gradually declines towards the end of the year, with a slight recovery during the holiday period.
 
 This pattern suggests higher demand during warmer months and peak travel seasons, reinforcing the importance of timing and seasonality when evaluating Airbnb earning potential. The visual provides valuable insight for hosts planning availability, pricing strategies, or personal use of their property across the year.
+
+## 4. Average Price by Number of Bedrooms (Bar Chart)
+![Tableau Overview](tableau/screenshots/6.png)
+### Purpose
+To analyse how Airbnb pricing varies based on property size and determine how the number of bedrooms influences average nightly rates.
+
+### Fields Used
+- Bedrooms (Listings)
+- Average of Price (Listings)
+
+### Why This Visual Was Chosen
+A bar chart is an effective way to compare average prices across discrete, ordered categories such as the number of bedrooms. This format allows users to clearly see how pricing changes as property size increases, while maintaining a simple and intuitive layout.
+
+Using **average price** ensures that comparisons reflect typical pricing behaviour rather than being skewed by the number of listings within each bedroom category. The bars are ordered logically by bedroom count, reinforcing the natural progression from smaller to larger properties.
+
+A single, consistent colour was applied to reduce visual clutter and keep the focus on the relationship between bedroom count and price rather than on category differentiation.
+
+### Insight Provided
+The visual shows a clear positive relationship between the number of bedrooms and average Airbnb price. Smaller properties with one or two bedrooms have substantially lower average prices, while larger properties command significantly higher nightly rates.
+
+This trend highlights how property size is a major driver of Airbnb pricing and provides valuable insight for potential hosts or investors evaluating whether larger properties justify higher acquisition or operating costs based on expected returns.
+
+## 5. Count of Listings by Number of Bedrooms (Table)
+![Tableau Overview](tableau/screenshots/7.png)
+### Purpose
+To quantify the number of Airbnb listings available for each bedroom category and assess the level of competition across different property sizes.
+
+### Fields Used
+- Bedrooms (Listings)
+- Distinct Count of Listing ID (Listings)
+
+### Why This Visual Was Chosen
+A simple table was chosen because the primary goal of this visual is to communicate exact counts rather than trends or comparisons based on magnitude. Tables are well suited for presenting precise numerical values, especially when the number of categories is small and the information needs to be easily readable.
+
+Using a **distinct count of Listing ID** ensures that each property is counted only once, avoiding duplication and providing an accurate representation of listing availability by bedroom count. The table format also pairs naturally with the previous bar chart showing average price by bedroom, allowing users to compare pricing potential against competition levels.
+
+### Insight Provided
+The visual shows that one-bedroom listings dominate the Seattle Airbnb market, with a significantly higher number of properties compared to larger homes. As the number of bedrooms increases, the count of available listings drops sharply.
+
+This indicates that while larger properties tend to command higher average prices, they face substantially less competition. This insight is valuable for hosts or investors weighing the trade-off between higher pricing potential and market saturation when selecting property sizes.
+
+---
+
+## Dashboard-Level Design Considerations
+![Tableau Overview](tableau/screenshots/8.png)
+- Consistent colour usage was applied to improve visual cohesion.
+- Visuals were arranged to guide users from pricing context to revenue trends and supply distribution.
+- Unnecessary visual clutter was avoided to maintain clarity and readability.
+
+---
+
+## Summary
+
+The dashboard combines geographic, temporal, and categorical analysis to provide a clear picture of the Seattle Airbnb market. By linking pricing, location, time, and property size, the visualisations work together to tell a coherent and accessible analytical story.

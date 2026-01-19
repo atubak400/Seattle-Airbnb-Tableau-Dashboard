@@ -1,10 +1,10 @@
-# Seattle Airbnb Tableau Dashboard Analysis
+# Seattle Airbnb Tableau Dashboard
 
 ## Project Overview
 
-This project analyses real-world Airbnb listing data for Seattle using Tableau. The aim is to transform raw listing and calendar data into clear, interactive insights that highlight pricing patterns, geographic distribution, property characteristics, and seasonal revenue trends.
+This project analyses Airbnb listing data for Seattle using Tableau Public. The aim is to explore pricing patterns, revenue trends, and listing distribution across different zip codes and property sizes, and to present these insights in a clean, interactive dashboard.
 
-The project demonstrates end-to-end data analyst skills, including data cleaning, data modelling, exploratory analysis, and interactive dashboard design using Tableau.
+The project demonstrates core data analytics and data visualisation skills, including data modelling, aggregation, time-based analysis, and dashboard design using Tableau.
 
 ---
 
@@ -12,30 +12,28 @@ The project demonstrates end-to-end data analyst skills, including data cleaning
 
 The objective of this project is to provide an interactive dashboard that helps stakeholders:
 
-- Understand average Airbnb pricing across different Seattle zip codes
-- Identify geographic areas with higher or lower rental prices
-- Analyse how pricing varies by number of bedrooms
-- Explore seasonal trends in Airbnb revenue over time
-- Assess listing density and competition across property sizes
+- Understand how average Airbnb prices vary by zip code
+- Analyse how pricing changes with the number of bedrooms
+- Examine revenue trends over time
+- Assess the distribution of listings across different property sizes
 
-The dashboard supports data-driven decision-making for potential property investors and hosts by presenting Airbnb market data in a clear and accessible format.
+The dashboard supports data-driven decision-making for hosts, analysts, and stakeholders interested in short-term rental market behaviour in Seattle.
 
 ---
 
 ## Dataset Description
 
-The dataset is a real-world Seattle Airbnb dataset containing listing and calendar information. The data was provided in Excel format and consists of multiple related sheets.
+The dataset is a publicly available Airbnb dataset for Seattle, provided in Excel format. It contains detailed information about listings and calendar-based pricing data.
 
-**Data source:** Seattle Airbnb Open Data (shared via Kaggle and GitHub)  
-**Format:** Excel (`.xlsx`)
-
+**Data source:** Public Seattle Airbnb dataset  
+**Format:** Excel (`.xlsx`)  
 **Granularity:**
-- Listings: One row per Airbnb property
-- Calendar: One row per listing per date
+- Listings table: One row per Airbnb listing  
+- Calendar table: One row per listing per date  
 
 ---
 
-## Data Cleaning and Preparation
+## Data Preparation and Cleaning
 
 The dataset required minimal traditional data cleaning, as it originates from a structured and curated open-data source. Instead, data cleaning in this project focused on analytical decisions, filtering, and data modelling choices made within Tableau to ensure accuracy, performance, and clarity.
 
@@ -47,70 +45,70 @@ Key data cleaning and preparation steps included:
 - Removing the **Reviews** table from the data model to prevent unnecessary row expansion and performance issues, as review data was not required for the planned analyses.
 - Ensuring correct join logic between the Listings and Calendar tables by matching **Listings.id** to **Calendar.listing_id**.
 - Avoiding premature date filtering, allowing time-based filters to be applied only when required for seasonal and revenue trend analysis.
+- Filtered calendar data to focus on **2016**, the most complete year, for time-based revenue analysis.
+- Removed unnecessary fields from views to reduce clutter and improve readability.
 
 These steps ensured the dataset remained clean, performant, and analytically sound while preserving the integrity of the original data.
 
 ---
 
-## Data Modelling
+## Data Model
 
-The dataset was imported directly into Tableau Public Desktop from Excel. Tableau automatically detected the Listings and Calendar sheets and displayed them in the data source panel.
+The data model consists of two core tables:
 
+- **Listings**: Static listing attributes such as price, bedrooms, and zip code.
+- **Calendar**: Date-level pricing data used for revenue analysis.
+
+The tables were joined using the listing identifier to support both geographic and time-based analysis.
 ![Tableau Overview](tableau/screenshots/1.png)
 ![Tableau Overview](tableau/screenshots/2.png)
-
-The **Listings** table was selected as the primary table, as it contains the core property-level information required for pricing, geographic, and bedroom-based analysis. The Calendar table was joined to the Listings table to support time-based pricing and revenue analysis.
-
-Key modelling steps included:
-
-- Identifying **Listings** as the central table for analysis.
-- Joining **Listings.id** to **Calendar.listing_id** using an inner join.
-- Verifying join relationships and reviewing row counts to confirm correct data linkage.
-
-This data model enables analysis across location, pricing, property size, and time, while remaining simple and performant for Tableau Public.
-
 ---
 
 ## Visualisation and Dashboard Design
 
-The dashboard was designed to guide users from high-level geographic insights to more detailed pricing and seasonal trends. Each visualisation was deliberately selected based on the type of question being answered and the structure of the underlying data.
-
-A clear and minimal design approach was applied throughout to ensure the dashboard remains accessible to non-technical users while still supporting analytical exploration.
+The dashboard was designed to guide users from high-level pricing insights to deeper analysis of revenue trends and listing distribution.
 
 Key visual components include:
 
-- A **bar chart** showing average price by zip code, enabling comparison of Airbnb pricing across different areas of Seattle.
+- **Average Price per Bedroom (Bar Chart)**  
+  Highlights how pricing increases with property size.
 ![Tableau Overview](tableau/screenshots/3.png)
-- A **map visualisation** displaying zip codes colour-coded by average price to highlight geographic pricing patterns.
+- **Revenue for Year (Line Chart)**  
+  Shows weekly revenue trends across 2016 and highlights seasonal patterns.
 ![Tableau Overview](tableau/screenshots/4.png)
-- A **time series line chart** showing total revenue over time, allowing identification of seasonal trends in Airbnb bookings.
+- **Distinct Count of Bedroom Listings (Table)**  
+  Provides supply-side context by showing how listings are distributed by bedroom count.
 ![Tableau Overview](tableau/screenshots/5.png)
-- A **bar chart** comparing average price by number of bedrooms, demonstrating how property size impacts pricing.
-- A **bar chart** showing the count of listings by number of bedrooms, helping assess competition levels across property sizes.
+- **Price per Zip Code (Bar Chart)**  
+  Enables comparison of average prices across different Seattle zip codes.
+![Tableau Overview](tableau/screenshots/6.png)
+- **Price per Zip Code (Map)**  
+  Adds geographic context to pricing differences across the city.
+![Tableau Overview](tableau/screenshots/7.png)
+Detailed visual-level design decisions, field selections, and insights are documented in:  
+`docs/data_visualisation.md`
 
-Consistent colour usage and logical layout were applied to improve readability and interpretation.
-Detailed visual-level design decisions, field selections, and insights are documented in notes/visualisation_design.md.
 ---
 
 ## Dashboard Overview
 
-The Tableau dashboard is fully interactive and designed to support exploratory analysis. Users can interact with charts and filters to explore how location, property size, and seasonality influence Airbnb pricing and revenue.
+The Tableau dashboard is fully interactive and designed for exploratory analysis.
 
-### Main Dashboard
+**Live dashboard:**  
+https://public.tableau.com/views/SeattleAirbnbTableauDashboard/Dashboard1
 
-![Dashboard Overview](images/dashboard_overview.png)
+### Dashboard Preview
+
+![Tableau Overview](tableau/screenshots/8.png)
 
 ---
 
 ## Key Insights
 
-- Average Airbnb prices vary significantly across Seattle zip codes, with some areas commanding notably higher nightly rates.
-- Higher-priced zip codes tend to cluster geographically, reinforcing the importance of location in short-term rental pricing.
-- Airbnb prices generally increase with the number of bedrooms, while listing availability decreases for larger properties.
-- Revenue patterns display clear seasonality, with higher earnings during peak travel periods.
-- Smaller properties face greater competition due to higher listing volumes compared to larger homes.
-
-These insights demonstrate how raw Airbnb data can be transformed into actionable market intelligence.
+- Airbnb prices vary significantly across Seattle zip codes, indicating strong location-based pricing effects.
+- Properties with more bedrooms command substantially higher average prices.
+- Revenue increases steadily across the year, with visible seasonal fluctuations.
+- One-bedroom listings dominate the market, suggesting strong supply of smaller properties.
 
 ---
 
@@ -123,24 +121,21 @@ These insights demonstrate how raw Airbnb data can be transformed into actionabl
 
 ## How to Use the Dashboard
 
-- Interact with charts to highlight specific zip codes or bedroom categories
-- Compare pricing patterns across locations and property sizes
-- Review time series trends to identify seasonal behaviour
+- Hover over visuals to explore detailed tooltips.
+- Use filters to focus on specific zip codes or bedroom categories.
+- Explore relationships between location, time, and pricing.
 
 ---
 
 ## Future Improvements
 
-- Introduce additional filters for neighbourhood and property type
-- Enhance dashboard interactivity using parameters and dashboard actions
-- Update the dataset to include more recent Airbnb data
-- Incorporate additional metrics such as occupancy rate or availability trends
+- Add multi-year comparisons if additional calendar data becomes available.
+- Introduce neighbourhood-level analysis.
+- Enhance interactivity with parameters and dynamic insights.
 
 ---
 
 ## Author
 
 **Kingsley Atuba**  
-Data Analyst | Tableau | Power BI | SQL | Excel
-
-# Seattle-Airbnb-Tableau-Dashboard
+Data Analyst | Tableau | SQL | Excel
