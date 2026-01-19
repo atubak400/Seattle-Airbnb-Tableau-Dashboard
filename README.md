@@ -106,10 +106,15 @@ https://public.tableau.com/views/SeattleAirbnbTableauDashboard/Dashboard1
 
 ## Key Insights
 
-- Airbnb prices vary significantly across Seattle zip codes, indicating strong location-based pricing effects.
-- Properties with more bedrooms command substantially higher average prices.
-- Revenue increases steadily across the year, with visible seasonal fluctuations.
-- One-bedroom listings dominate the market, suggesting strong supply of smaller properties.
+- Average Airbnb prices increase as the number of bedrooms increases, indicating a clear and consistent relationship between property size and nightly pricing across Seattle listings.
+
+- One-bedroom listings make up the largest share of available properties, while listings with five or six bedrooms are relatively rare, showing that the market is dominated by smaller accommodation types.
+
+- Average Airbnb prices vary noticeably by zip code, demonstrating that location plays a significant role in pricing, even within the same city.
+
+- Higher-priced zip codes tend to cluster geographically, suggesting that premium pricing is concentrated in specific areas rather than evenly distributed across Seattle.
+
+- Total weekly revenue shows a steady upward trend throughout 2016, with periods of faster growth earlier in the year and more stable performance in later months, indicating seasonality in Airbnb demand.
 
 ---
 
