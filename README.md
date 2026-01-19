@@ -84,11 +84,12 @@ Key visual components include:
 - A **map visualisation** displaying zip codes colour-coded by average price to highlight geographic pricing patterns.
 ![Tableau Overview](tableau/screenshots/4.png)
 - A **time series line chart** showing total revenue over time, allowing identification of seasonal trends in Airbnb bookings.
+![Tableau Overview](tableau/screenshots/5.png)
 - A **bar chart** comparing average price by number of bedrooms, demonstrating how property size impacts pricing.
 - A **bar chart** showing the count of listings by number of bedrooms, helping assess competition levels across property sizes.
 
 Consistent colour usage and logical layout were applied to improve readability and interpretation.
-
+Detailed visual-level design decisions, field selections, and insights are documented in notes/visualisation_design.md.
 ---
 
 ## Dashboard Overview

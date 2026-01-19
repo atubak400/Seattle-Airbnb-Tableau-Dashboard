@@ -45,3 +45,25 @@ This visual is particularly effective for non-technical users, as spatial relati
 The map reveals clear geographic clustering of Airbnb prices across Seattle. Higher average prices tend to concentrate in specific central and waterfront zip codes, while lower prices appear more frequently in outer or less central areas.
 
 This spatial pattern reinforces the strong influence of location on Airbnb pricing and provides actionable insight for potential hosts or investors when evaluating where to focus property acquisition or pricing strategies. The map also validates trends observed in the bar chart by showing that high- and low-priced zip codes are not randomly distributed, but geographically structured.
+
+## 3. Revenue Over Time (Weekly Line Chart)
+![Tableau Overview](tableau/screenshots/5.png)
+### Purpose
+To analyse how Airbnb revenue changes over time across the year and identify seasonal patterns in booking activity and earnings.
+
+### Fields Used
+- Date (Calendar)
+- Week of Date (Calendar)
+- Sum of Price (Calendar)
+
+### Why This Visual Was Chosen
+A line chart is well suited for time-series analysis because it clearly shows trends, fluctuations, and overall movement over time. Aggregating the data at a weekly level reduces daily noise while still preserving meaningful seasonal variation across the year.
+
+Using **Calendar.price** rather than Listings.price ensures that the visual reflects actual realised nightly pricing across dates, making it appropriate for revenue analysis rather than base price comparison. The weekly time granularity also supports easier interpretation for non-technical users, who may find daily trends overly detailed.
+
+This visual helps bridge the gap between static pricing analysis and dynamic performance over time.
+
+### Insight Provided
+The chart shows that Airbnb revenue exhibits clear seasonality throughout the year. Revenue increases steadily from early January into late spring, peaks during the summer months, and then gradually declines towards the end of the year, with a slight recovery during the holiday period.
+
+This pattern suggests higher demand during warmer months and peak travel seasons, reinforcing the importance of timing and seasonality when evaluating Airbnb earning potential. The visual provides valuable insight for hosts planning availability, pricing strategies, or personal use of their property across the year.
