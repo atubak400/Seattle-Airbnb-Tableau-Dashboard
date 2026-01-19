@@ -1,7 +1,7 @@
 # Seattle Airbnb Tableau Dashboard (Beginner Project)
 
 ## Goal
-Recreate the beginner Tableau project using the Seattle Airbnb dataset and build a dashboard with:
+Create Tableau project using the Seattle Airbnb dataset and build a dashboard with:
 - Avg Price by Zip Code (bar)
 - Price by Zip Code (map)
 - Revenue over Time (weekly line for 2016)
